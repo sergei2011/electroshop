@@ -21,7 +21,7 @@ class Item:
         self.__name = name
         self.price = price
         self.quantity = quantity
-        Item.all.append(self)
+        #Item.all.append(self)
 
 
     def calculate_total_price(self) -> float:
@@ -64,7 +64,7 @@ class Item:
 
                 #list_techn = cls(name, price, quantity)
                 #item.append(list_techn)
-                #cls.all.append(item)
+                cls.all.append(item)
             #print(cls.all[3])
 
 
