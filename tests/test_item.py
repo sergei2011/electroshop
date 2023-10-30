@@ -2,6 +2,7 @@
 from src.item import Item
 
 item1 = Item("Смартфон", 10000, 20)
+item3 = Item("питон", 10000, 20)
 
 def test_calculate_total_price():
     assert Item.calculate_total_price(item1) == 200000
@@ -18,3 +19,8 @@ def test_instantiate_from_csv():
     item2 = Item.all[0]
     assert item2.name == 'Смартфон'
 
+def test_repr():
+    assert repr(item3) == "Item('питон', '10000', 20)"
+
+def test_str():
+    assert str(item3) == "питон"
