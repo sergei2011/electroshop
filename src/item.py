@@ -81,4 +81,12 @@ class Item:
         return int(float(str))
 
 
+    def __add__(self, other):
+        if not isinstance(other, Item):
+            raise ValueError('Складывать можно только объекты Item и дочерние от них.')
+        return self.quantity + other.quantity
+
+
+
+
 
