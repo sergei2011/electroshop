@@ -25,8 +25,8 @@ class Keyboard(Item, Lang):
     def __init__(self, name: str, price: float, quantity: int, language="EN"):
         super().__init__(name, price,quantity)
         self.__language = language
-        #if self.__language.upper() != "EN" and self.__language.upper() != "RU":
-         #   raise ValueError("AttributeError: property 'language' of 'Keyboard' object has no setter")
+        if self.__language.upper() != "EN" and self.__language.upper() != "RU":
+            raise ValueError("AttributeError: property 'language' of 'Keyboard' object has no setter")
 
 #kb = Keyboard('Dark Project KD87A', 9600, 5)
 #kb.language = 'CH'
