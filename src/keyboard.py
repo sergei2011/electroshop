@@ -28,7 +28,7 @@ class Keyboard(Item, Lang):
         if self.__language.upper() != "EN" and self.__language.upper() != "RU":
             raise ValueError("AttributeError: property 'language' of 'Keyboard' object has no setter")
 
-kb = Keyboard('Dark Project KD87A', 9600, 5)
-kb.language = 'CH'
+#kb = Keyboard('Dark Project KD87A', 9600, 5)
+#kb.language = 'CH'
 #kb.change_lang()
-print(kb.language)
+#print(kb.language)
