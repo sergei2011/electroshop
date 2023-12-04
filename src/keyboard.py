@@ -9,12 +9,12 @@ class Lang:
     def language(self):
         return self.__language
 
-    @language.setter
-    def language(self, language):
-        if language.upper() != "EN" and language.upper() != "RU":
-            raise ValueError("AttributeError: property 'language' of 'Keyboard' object has no setter")
-        else:
-            self.__language = language
+    #@language.setter
+    #def language(self, language):
+        #if language.upper() != "EN" and language.upper() != "RU":
+            #raise ValueError("AttributeError: property 'language' of 'Keyboard' object has no setter")
+        #else:
+            #self.__language = language
     def change_lang(self):
         if self.__language == "EN":
             self.__language = "RU"
