@@ -1,10 +1,13 @@
 """Здесь надо написать тесты с использованием pytest для модуля item."""
 from src.item import Item
+from src.keyboard import Lang, Keyboard
 from src.phone import Phone
 
 item1 = Item("Смартфон", 10000, 20)
 item3 = Item("питон", 10000, 20)
 item4 = Phone("питон", 10000, 20, 2)
+item5 = Keyboard("питон", 10000, 20, 2)
+
 
 def test_calculate_total_price():
     assert Item.calculate_total_price(item1) == 200000
@@ -21,6 +24,8 @@ def test_instantiate_from_csv():
     item2 = Item.all[0]
     assert item2.name == 'Смартфон'
 
+
+
 def test_repr():
     assert repr(item3) == "Item('питон', '10000', 20)"
 
@@ -33,3 +38,11 @@ def test_phonerepr():
 def test_phonestr():
     assert str(item4) == "питон"
 
+
+def test_change_lang():
+    item5.change_lang()
+    assert item5.language == 'RU'
+
+
+def test_language():
+    assert item5.language == 'EN'
