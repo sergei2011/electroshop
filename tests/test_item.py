@@ -27,22 +27,22 @@ def test_instantiate_from_csv():
 
 
 def test_repr():
-    assert repr(item3) == "Item('питон', '10000', 20)"
+    assert repr(item3) == "Item('питон', 10000, 20)"
 
 def test_str():
     assert str(item3) == "питон"
 
 def test_phonerepr():
-    assert repr(item4) == "Item('питон', 10000, 20, 2)"
+    assert repr(item4) == "Phone('питон', 10000, 20, 2)"
 
 def test_phonestr():
     assert str(item4) == "питон"
 
+def test_language():
+    assert item5.language == 'EN'
 
 def test_change_lang():
     item5.change_lang()
     assert item5.language == 'RU'
 
 
-def test_language():
-    assert item5.language == 'EN'
